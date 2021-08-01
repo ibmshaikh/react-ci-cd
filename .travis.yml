@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build ibmshaikh/react-app -f Dockerfile.dev .
+  - docker build -t ibmshaikh/react-app -f Dockerfile.dev .
 
 script:
   - docker run ibmshaikh/react-app npm run test -- --coverage
